@@ -25,7 +25,11 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@app/*": ["./src/app/*"],
-			"@components/*": ["./src/components/*"]
+			"@atoms/*": ["./src/ui/atoms/*"],
+			"@molecules/*": ["./src/ui/molecules/*"],
+			"@organisms/*": ["./src/ui/organisms/*"],
+			"@utils": ["./src/utils"],
+			"@types": ["./src/ui/types"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

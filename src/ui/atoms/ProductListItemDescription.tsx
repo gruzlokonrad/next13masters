@@ -1,9 +1,9 @@
 import React from 'react'
-import { type Product } from '@types'
+import { type ProductListItemProductType } from '@types'
 import { formatMoney } from '@utils'
 
 
-export const ProductListItemDescription = ({ name, category, price }: Product) => {
+export const ProductListItemDescription = ({ name, category, price }: ProductListItemProductType) => {
 	return (
 		<div className="mt-2 flex justify-between">
 			<div>

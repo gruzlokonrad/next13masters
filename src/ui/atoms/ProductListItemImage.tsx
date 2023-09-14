@@ -5,7 +5,7 @@ import { type ProductListItemImageType } from '@types'
 
 export const ProductListItemImage = ({ src, alt }: ProductListItemImageType) => {
   return (
-    <div className='hover:bg-gradient-to-tr from-green-600 via-black hover:to-blue-500 group p-[3px] rounded-md '>
+    <div className='hover:brand-gradient group p-[3px] rounded-md '>
       <div className="
       aspect-square overflow-hidden rounded-md 
       border border-slate-200 

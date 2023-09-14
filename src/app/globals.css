@@ -3,16 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+	html {
+		scroll-behavior: smooth;
+	}
 }
 
-@layer components {}
+@layer components {
+	.button {
+		@apply px-4 py-2
+        rounded-full 
+        hover:scale-105 
+        text-white font-semibold
+        w-36 
+        m-8
+        border-2 border-white 
+        transition-all ease-in-out
+        brand-gradient;
+	}
+}
 @layer utilities {
-  .preview {
-    @apply 
-    box-border
+	.preview {
+		@apply box-border
     border-2
     border-red-600
     sm:border-orange-400
@@ -20,7 +31,11 @@
     lg:border-green-400
     xl:border-blue-400
     2xl:border-purple-400;
-  }
+	}
+
+	.brand-gradient {
+		@apply bg-gradient-to-tr from-green-600 via-black to-blue-500;
+	}
 }
 
 /* :root {

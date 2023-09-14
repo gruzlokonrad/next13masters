@@ -1,14 +1,9 @@
 import React from 'react'
 import { ProductListItemImage } from '@atoms/ProductListItemImage'
 import { ProductListItemDescription } from '@atoms/ProductListItemDescription'
-import type { Product, Image } from '@types'
+import type { ProductListItemProductType, ProductListItemImageType } from '@types'
 
-type ProductListItem = {
-  product: Product,
-  image: Image,
-}
-
-export const ProductListItem = ({product, image}: ProductListItem) => {
+export const ProductListItem = ({ product, image }:{ product: ProductListItemProductType, image: ProductListItemImageType }) => {
   return (
     <article>
       <ProductListItemImage {...image} />

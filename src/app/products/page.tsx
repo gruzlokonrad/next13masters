@@ -3,6 +3,8 @@ import { ProductList } from '@organisms/ProductList';
 
 export default function Products() {
   return (
-    <ProductList />
+    <section className="bg-white">
+      <ProductList />
+    </section>
   )
 }

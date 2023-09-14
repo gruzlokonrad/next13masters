@@ -1,16 +1,29 @@
-export type Product = {
+export type ProductListItemProductType = {
   name: string;
   category: string;
   price: number;
 }
 
-export type Image = {
+export type ProductListItemImageType = {
   src: string;
   alt: string;
 }
 
-export type Products = {
+export type DataCategoriesType = {
   id: string;
-  image: Image;
-  product: Product;
+  name: string;
+}
+
+export type DataImageType = {
+  id: string;
+  url: string;
+  fileName: string;
+}
+
+export type DataProductType = {
+  id: string;
+  name: string;
+  price: number;
+  categories: DataCategoriesType[];
+  images: DataImageType[];
 }

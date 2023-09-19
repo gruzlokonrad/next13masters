@@ -18,7 +18,7 @@ export const ProductListItemDescription = ({ productId, name, category, price }:
 			</div>
 			<p className="text-sm text-gray-500">
 				{/**** Add handle category params ****/}
-				<Link href={`/products/${category}`}>
+				<Link href={`/products/${category}/1`}>
 					<span className="sr-only">Kategoria:</span> {category}
 				</Link>
 			</p>

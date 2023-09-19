@@ -30,6 +30,15 @@
 			"@types": ["./src/ui/types"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/customLayout.js"],
+	"mdx": {
+		"plugins": [["remark-frontmatter", ["toml", "yaml"]], "remark-gfm"]
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"src/context/customLayout.js"
+	],
 	"exclude": ["node_modules"]
 }

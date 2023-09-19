@@ -8,8 +8,10 @@ export const metadata: Metadata = {
 
 const ConditionsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className='prose flex-grow text-2xl font-semibold'>
-      <div>{children}</div>
+    <main className='flex-grow mx-auto'>
+      <article className="prose prose-lg p-6">
+        {children}
+      </article>
     </main>
   )
 }

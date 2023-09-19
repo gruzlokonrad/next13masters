@@ -15,10 +15,11 @@
         hover:scale-105 
         text-white font-semibold
         w-36 
-        m-8
         border-2 border-white 
         transition-all ease-in-out
-        brand-gradient;
+        brand-gradient
+        text-center
+        flex items-center justify-center;
 	}
 }
 @layer utilities {

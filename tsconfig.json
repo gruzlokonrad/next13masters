@@ -25,13 +25,11 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@app/*": ["./src/app/*"],
-			"@atoms/*": ["./src/ui/atoms/*"],
-			"@molecules/*": ["./src/ui/molecules/*"],
-			"@organisms/*": ["./src/ui/organisms/*"],
+			"@ui/*": ["./src/ui/*"],
 			"@utils": ["./src/utils"],
 			"@types": ["./src/ui/types"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/customLayout.js"],
 	"exclude": ["node_modules"]
 }

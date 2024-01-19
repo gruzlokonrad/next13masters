@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export const Pagination = ({ pagePagination, categoryName }: { pagePagination: string, categoryName: string }): React.JSX.Element => {
+export const Pagination = ({ pagePagination, categoryName }: { pagePagination: string, categoryName: string }) => {
   return (
     <ul className="flex justify-center">
       <Link href={`/products/${categoryName}/${pagePagination}`} key={pagePagination}>

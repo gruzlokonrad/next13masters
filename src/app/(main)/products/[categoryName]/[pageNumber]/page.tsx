@@ -1,7 +1,15 @@
-import { getProductsByCategoryName } from "@/app/db/utils";
+import { type CategoryType, getProductsByCategoryName } from "@/app/db/utils";
 import { Pagination } from "@/ui/atoms/Pagination";
 import { ProductList } from "@/ui/organisms/ProductList";
-import type { CategoryType } from "@/ui/types";
+
+type PageParams = {
+  categoryName: string,
+  pageNumber: string
+}
+
+type Page = {
+  params: PageParams
+}
 
 
 export async function generateStaticParams({ params }: { params: CategoryType }) {
@@ -17,7 +25,7 @@ export async function generateStaticParams({ params }: { params: CategoryType })
   }
 }
 
-export default async function Page({ params }: { params: { categoryName: string, pageNumber: string } }) {
+export default async function Page({ params }: Page) {
   const products = await getProductsByCategoryName(params.categoryName);
   return (
     <div className="mx-auto my-10">

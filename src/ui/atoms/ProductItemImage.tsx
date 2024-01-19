@@ -1,8 +1,12 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import type { ParsedImageType } from '@types';
 
+export type ParsedImageType = {
+  productId: string;
+  src: string;
+  alt: string;
+}
 
 export const ProductListItemImage = ({ productId, src, alt }: ParsedImageType) => {
   return (

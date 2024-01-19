@@ -12,7 +12,7 @@ type ActiveLink = {
   children: React.ReactNode
 }
 
-export const ActiveLink = ({href, children, className, activeClassName}: ActiveLink): React.JSX.Element => {
+export const ActiveLink = ({href, children, className, activeClassName}: ActiveLink) => {
   const pathname = usePathname()
   const isActive = href === pathname
   return (

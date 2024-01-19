@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react'
 import { ProductItem } from '@/ui/molecules/ProductItem';
-import type { ProductItemType } from '@types';
+import { type ParsedProductType } from "@/ui/atoms/ProductItemDescription";
+import { type ParsedImageType } from "@/ui/atoms/ProductItemImage";
 
-
+export type ProductItemType = {
+  id: string;
+  image: ParsedImageType;
+  product: ParsedProductType;
+}
 
 
 export const SuggestedProductsList = async ({ products }: {products: ProductItemType[]}) => {

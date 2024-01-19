@@ -1,7 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { formatMoney } from '@/utils/formatMoney'
-import type { ParsedProductType } from '@types'
+
+export type ParsedProductType = {
+	productId: string;
+	category: string;
+	name: string;
+	price: number;
+}
 
 export const ProductListItemDescription = ({ productId, name, category, price }: ParsedProductType) => {
 	return (

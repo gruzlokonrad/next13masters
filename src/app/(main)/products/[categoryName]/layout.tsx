@@ -1,8 +1,7 @@
 import { getAllCategories } from "@/app/db/utils";
-import type { CategoryType } from "@types";
 
 export async function generateStaticParams() {
-  const categories: CategoryType[] = await getAllCategories();
+  const categories = await getAllCategories();
   return categories
 }
 

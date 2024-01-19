@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProductItem } from '@/ui/molecules/ProductItem';
-import type { ProductItemType } from '@types';
+import { type ProductItemType } from '@/ui/organisms/SuggestedProductsList';
 
 export const ProductList = async ({products}: {products: ProductItemType[]}) => {
   return (

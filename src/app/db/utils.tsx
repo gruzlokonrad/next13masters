@@ -1,5 +1,32 @@
 import { GraphQLClient, gql } from 'graphql-request';
-import type { CategoriesType, CategoryType, ProductsType } from '@/ui/types';
+
+type ImageType = {
+  id: string;
+  url: string;
+  fileName: string;
+}
+
+type ProductType = {
+  id: string;
+  name: string;
+  price: number;
+  categories: CategoryType[];
+  images: ImageType[];
+}
+
+
+type ProductsType = {
+  products: ProductType[]
+}
+
+export type CategoryType = {
+  id: string;
+  name: string;
+}
+
+type CategoriesType = {
+  categories: CategoryType[]
+}
 
 const connectDB = () => {
   const hygraph: GraphQLClient = new GraphQLClient(

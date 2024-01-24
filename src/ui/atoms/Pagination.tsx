@@ -1,12 +1,11 @@
-import Link from 'next/link'
 import React from 'react'
+import { type Route } from 'next'
+import { ActiveLink } from './ActiveLink'
 
-export const Pagination = ({ pagePagination, categoryName }: { pagePagination: string, categoryName: string }) => {
-  return (
-    <ul className="flex justify-center">
-      <Link href={`/products/${categoryName}/${pagePagination}`} key={pagePagination}>
-        <li className="mx-2 px-4 py-2 border">{pagePagination}</li>
-      </Link>
-    </ul>
-  )
+export const Pagination = ({ links }: { links: Route[] }) => {
+  return <ul className="flex justify-center">
+    {links.map((link, index) =>
+      <ActiveLink href={link} key={link}>{index + 1}</ActiveLink>
+    )}
+  </ul>
 }

@@ -1,3 +1,4 @@
+import { type Route } from "next";
 import { type CategoryType, getProductsByCategoryName } from "@/app/db/utils";
 import { Pagination } from "@/ui/atoms/Pagination";
 import { ProductList } from "@/ui/organisms/ProductList";
@@ -27,11 +28,16 @@ export async function generateStaticParams({ params }: { params: CategoryType })
 
 export default async function Page({ params }: Page) {
   const products = await getProductsByCategoryName(params.categoryName);
+  const paginationsLinks: Route[] = []
+
+  for (let i = 0; i < products.length / 4; i++) {
+    paginationsLinks.push(`/products/${params.categoryName}/${(i + 1)}` as Route)
+  }
   return (
     <div className="mx-auto my-10">
       <h2 className="container mx-auto">{params.categoryName}</h2>
       <ProductList products={products} />
-      <Pagination pagePagination={params.pageNumber} categoryName={params.categoryName} />
+      <Pagination links={paginationsLinks} />
     </div>
   )
 }
